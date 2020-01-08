@@ -1,0 +1,238 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Teko:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: #eeeeee;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url('images/pic.jpeg');
+
+            /* Full height */
+            height: 10%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        a {
+            color: #f2f2f2;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        nav {
+            padding: 0px;
+            text-align: center;
+            position: fixed;
+            margin: -8px;
+            background-color: #333;
+            width: 100%;
+            font-family: 'PT Sans', sans-serif;
+            line-height: 65px;
+
+        }
+
+        nav>ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            background: #333;
+
+            float: left;
+        }
+
+        nav>ul>li {
+            float: left;
+            width: 140px;
+            height: 65px;
+            font-size: large;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 17px;
+            color: #f2f2f2;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        nav>ul>li:hover {
+            background: #888;
+
+        }
+
+        ul.drop-menu {
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            width: 100%;
+            padding: 0;
+        }
+
+        ul.drop-menu li {
+            background: #ababab;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        ul.drop-menu li:hover {
+            background: #606060;
+        }
+
+        ul.drop-menu li:last-child {
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        ul.drop-menu li {
+            display: none;
+        }
+
+        li:hover>ul.drop-menu li {
+            display: block;
+        }
+
+        #logo {
+            cursor: none;
+            font-size: 70px;
+            float: left;
+            left: 0;
+            padding: -5px;
+            margin-left: -10px;
+            width: 700px;
+            font-family: 'Poiret One', cursive;
+        }
+
+        #logo:hover {
+            background: #333;
+            cursor: default;
+        }
+
+        #main-heading {
+            margin: 40px;
+            margin-bottom: 15px;
+            margin-left: 10px;
+            padding-bottom: -20px;
+            font-size: 50px;
+            border-bottom: solid 2.5px darkcyan;
+            font-family: 'Teko', sans-serif;
+            color: #333333;
+
+        }
+
+        .content {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+
+            margin: 20px;
+            margin-left: 15px;
+        }
+
+        .sub-heading {
+            margin: 20px;
+            margin-left: 15px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 30px;
+            color: #ff5f2a;
+        }
+
+        .special {
+            color: #efefef;
+            background-color: #444;
+            display: inline;
+            border: solid #38a8d1 2px;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="Navigation Container">
+        <ul>
+            <li id="logo">IS F311 Assignment 1</li>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#program">The Program</a></li>
+            <li><a href="#samples">Fractals</a>
+            <li><a href="#team">The Team</a>
+
+            </li>
+
+
+        </ul>
+    </nav>
+    <div class="parallax"></div>
+
+    <div id="intro" class="subjects">
+        <div id="main-heading">Introduction</div>
+        <div class="content">This HTML page has been created for the Computer Graphics Assignment 3 Sem 1 2018-19 under
+            Prof. Tathagata Ray.
+            <br>
+            We have implemented de Casteljau's algorithm for Bezier Curve Drawing using OpenGL.<br>
+            Control points can be added, moved and deleted.<br>
+
+            Right click on a point to go into edit mode.
+            While in edit mode, one can delete the highlited point by pressing the delete key,
+            or move the control point by clicking elsewhere.<br>
+        </div>
+    </div>
+
+    <div id="program" class="subjects">
+        <div id="main-heading">THE PROGRAM</div>
+        <div class="content">
+            The assignment has three major folders: Assignment 3, Doxygen and HTML Doc.<br>
+            The Assignment 3 directory contains the main.cpp, MidpointCircle.cpp and shaders.cpp.<br>
+            All functions relevant to de Casteljau's algorithm are in main.cpp.
+            We are drawing 2000 points (i.e. drawing a point for 2000 parametric values).
+            <div class="sub-heading" id="task1"><br>
+                Screenshots
+            </div>
+        </div>
+        <hr>
+        <img src="images/a3_1.png" height="70%" width="45%">
+        <img src="images/a3_2.png" height="70%" width="45%">
+        <img src="images/a3_3.png" height="70%" width="45%">
+        <img src="images/a3_4.png" height="70%" width="45%">
+
+
+        <div id="team" class="subjects">
+            <div id="main-heading">Team Members</div><br><br>
+            <div id="person">
+                <div id="personal-info" style="display: inline; vertical-align: middle;font-family: 'Lato', sans-serif; font-size: 20px;color:royalblue; "><br><br>&nbsp;
+                    &nbsp; &nbsp;Name: Dyuti Charavarthy<br><br>&nbsp;&nbsp;&nbsp;
+                    ID:2016AAPS0818H</div>
+            </div>
+            <div id="person">
+                <div id="personal-info" style="display: inline; vertical-align: middle;font-family: 'Lato', sans-serif; font-size: 20px;color:royalblue; "><br><br>&nbsp;
+                    &nbsp; &nbsp;Name: Vamsi Aribandi<br><br>&nbsp;&nbsp;&nbsp;
+                    ID:2016A7PS0803H</div>
+            </div>
+            <div id="person">
+                <div id="personal-info" style="display: inline; vertical-align: middle;font-family: 'Lato', sans-serif; font-size: 20px;color:royalblue; "><br><br>&nbsp;
+                    &nbsp; &nbsp;Name: Swayam Shivay<br><br>&nbsp;&nbsp;&nbsp;
+                    ID:2015B2A70801H</div>
+            </div>
+
+
+            <div class="content"></div>
+        </div>
+        <br><br>
+        <hr>
+
+
+</body>
+
+</html>
